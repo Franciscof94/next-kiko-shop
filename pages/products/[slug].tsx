@@ -63,13 +63,13 @@ const ProductPage: NextPage<Props> = ({ product }) => {
     dispatch(cart(tempCartProduct))
     router.push('/cart');
   }
-/* 
+
 
   useEffect(() => {
 
     dispatch(updateProductsInCart())
   }, [dispatch, productInCart])
- */
+
 
 
 
