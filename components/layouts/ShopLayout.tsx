@@ -23,7 +23,7 @@ export const ShopLayout: FC<Props> = ({
   const openMenu = useSelector((state: RootState) => state.toggleMenu.toggleMenu);
   return (
     <>
-      {openMenu && <div style={{ position: 'absolute', transition: 'all 0.5s', height: '100vh', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: "blur(8px)", width: '100%', zIndex: 11 }}></div>}
+      {openMenu && <div style={{ position: 'absolute', transition: 'all 0.5s', height: '100vh', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: "blur(8px)", width: '100%', zIndex: 15566 }}></div>}
       <Head>
         <title>{title}</title>
 
