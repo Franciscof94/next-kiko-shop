@@ -5,7 +5,7 @@ import  NextLink  from "next/link";
 import styled from "styled-components";
 import { CartList, OrderSummary } from "../../components/cart";
 import { ShopLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
+import {ButtonPrimary } from "../../share/Button";
 import { AppDispatch, RootState } from "../../store/store";
 import { addCookiesProductsToCart, updateProductsInCart } from "../../store/features/cartSlice";
 import Screen from "../../styles/Screen";
@@ -52,7 +52,7 @@ const CartPage = () => {
           <div>
             <OrderSummary />
           </div>
-          <NextLink href="/checkout/address" passHref><Button variant="primary">Checkout</Button></NextLink>
+          <NextLink href="/checkout/address" passHref><ButtonPrimary>Checkout</ButtonPrimary></NextLink>
         </div>
       </Wrapper>
     </ShopLayout>

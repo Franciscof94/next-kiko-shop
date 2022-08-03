@@ -6,7 +6,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
 import { ShopLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
+import { ButtonPrimary } from "../../share/Button";
 import { TextFields } from '../../components/ui/TextFields';
 
 import { AppDispatch, RootState } from '../../store/store';
@@ -124,7 +124,7 @@ const AddressPage = () => {
                   <TextFields label="País" name="state" type="string" />
                 </div>
               </div>
-              <Button type="submit" variant="primary">Revisar pedido</Button>
+              <ButtonPrimary type="submit" >Revisar pedido</ButtonPrimary>
             </Form>
           }}
         </Formik>

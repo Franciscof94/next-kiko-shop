@@ -4,7 +4,7 @@ import { GetServerSideProps, GetStaticPaths, NextPage } from "next";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { ShopLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
+import { ButtonPrimary } from "../../share/Button";
 import { ProductSlideshow, SizeSelector } from "../../components/products";
 import { ItemCounter } from "../../components/ui";
 import { ICartProduct, IProduct, ISize } from "../../interfaces";
@@ -96,7 +96,7 @@ const ProductPage: NextPage<Props> = ({ product }) => {
             />
           </div>
           {changeButton ? <ButtonDisabled>No hay disponibles</ButtonDisabled> :
-            <Button onClick={onAddProduct} disabled={changeButton} variant='primary'>{tempCartProduct.size ? 'Agregar al carrito' : 'Seleccione una talla'}</Button>}
+            <ButtonPrimary onClick={onAddProduct} disabled={changeButton}>{tempCartProduct.size ? 'Agregar al carrito' : 'Seleccione una talla'}</ButtonPrimary>}
           <span>Descripción</span>
           <p>{product.description}</p>
         </div>

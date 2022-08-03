@@ -8,7 +8,7 @@ import { BiSearch, BiCart } from "react-icons/bi";
 import { IoClose } from 'react-icons/io5';
 
 import Logo from "../../assets/logo.png";
-import { Button } from "../../share/Button";
+import { ButtonSecondary } from "../../share/Button";
 import { toggleMenu } from "../../store/features/toggleMenuSlice";
 import { AppDispatch, RootState } from "../../store/store";
 import Screen from "../../styles/Screen";
@@ -47,21 +47,23 @@ export const Navbar = () => {
     <Wrapper isSearchVisible={isSearchVisible}>
       <div>
         <NextLink href="/" passHref>
+          <>
           <Image width={90} height={25} src={Logo} alt="logo" />
+          </>
         </NextLink>
       </div>
       {isSearchVisible && size.width!! > 900 && <div></div>}
       {size.width!! > 900 && !isSearchVisible && <div>
         <NextLink href="/category/men" passHref>
-          <Button variant="secondary" bgColor={asPath === "/category/men" ? true : false} onClick={() => dispatch(toggleMenu(false))}>Hombres</Button>
+          <ButtonSecondary bgColor={asPath === "/category/men" ? true : false} onClick={() => dispatch(toggleMenu(false))}>Hombres</ButtonSecondary>
         </NextLink>
 
         <NextLink href="/category/women" passHref>
-          <Button variant="secondary" bgColor={asPath === "/category/women" ? true : false} onClick={() => dispatch(toggleMenu(false))}> Mujeres</Button>
+          <ButtonSecondary  bgColor={asPath === "/category/women" ? true : false} onClick={() => dispatch(toggleMenu(false))}> Mujeres</ButtonSecondary>
         </NextLink>
 
         <NextLink href="/category/kid" passHref>
-          <Button variant="secondary" bgColor={asPath === "/category/kid" ? true : false} onClick={() => dispatch(toggleMenu(false))}>Niños</Button>
+          <ButtonSecondary  bgColor={asPath === "/category/kid" ? true : false} onClick={() => dispatch(toggleMenu(false))}>Niños</ButtonSecondary>
         </NextLink>
       </div>}
 
@@ -88,7 +90,9 @@ export const Navbar = () => {
         <div>
           <div>{numberOfItems > 9 ? '+9' : numberOfItems}</div>
           <NextLink href="/cart" passHref>
+            <>
             <BiCart fontSize={27} color="#676767" />
+            </>
           </NextLink>
         </div>
         <div onClick={() => dispatch(toggleMenu(true))}>Menu</div>

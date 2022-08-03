@@ -7,7 +7,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
 import { AuthLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
+import { ButtonPrimary } from "../../share/Button";
 import { TextFields } from '../../components/ui/TextFields';
 import { CredentialsError } from '../../share/CredentialsError';
 
@@ -76,7 +76,7 @@ const LoginPage = () => {
                 <TextFields label="Password" name="password" type="password" />
               </div>
               {isError && <CredentialsError variant="primary"><RiErrorWarningLine fontSize={25} style={{ marginRight: '0.2rem' }} />No reconocemos ese usuario / contraseña</CredentialsError>}
-              <Button type="submit" variant="primary">Ingresar</Button>
+              <ButtonPrimary type="submit" >Ingresar</ButtonPrimary>
               <NextLink href={router.query.p ? `/auth/register?p=${router.query.p}` : '/auth/register'}>¿No tienes cuenta?</NextLink>
             </Form>
           }}
