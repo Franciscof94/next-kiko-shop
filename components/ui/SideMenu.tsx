@@ -179,7 +179,7 @@ export const SideMenu = () => {
 
 const Wrapper = styled.div<Styled>`
   background-color: #fff;
-  z-index: 15;
+  z-index: 1555555555;
   position: fixed;
   right: 0;
   top: 0;
