@@ -6,13 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { CartList, OrderSummary } from "../../components/cart";
 import { ShopLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
 import { AppDispatch, RootState } from "../../store/store";
 import Screen from "../../styles/Screen";
 import { jwt } from "../../utils";
 import { createOrder, loadAddressFromCookie, orderComplete } from "../../store/features/cartSlice";
 import Cookies from 'js-cookie';
 import { ButtonDisabled } from '../products/[slug]';
+import { ButtonPrimary } from '../../share/Button';
 
 
 interface Styled {
@@ -94,7 +94,7 @@ const SummaryPage = () => {
           <div>
             <OrderSummary />
           </div>
-          <Button disabled={isPosting} onClick={() => onCreateOrder()} variant="primary">Confirmar orden</Button>
+          <ButtonPrimary disabled={isPosting} onClick={() => onCreateOrder()}>Confirmar orden</ButtonPrimary>
           {hasError && <ButtonDisabled>{errorMessage}</ButtonDisabled>}
         </div>
       </Wrapper>

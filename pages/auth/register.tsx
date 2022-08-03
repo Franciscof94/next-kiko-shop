@@ -5,7 +5,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
 import { AuthLayout } from "../../components/layouts";
-import { Button } from "../../share/Button";
+import { Button, ButtonPrimary } from "../../share/Button";
 import { TextFields } from '../../components/ui/TextFields';
 import { CredentialsError } from '../../share/CredentialsError';
 import { RiErrorWarningLine } from 'react-icons/ri';
@@ -87,7 +87,7 @@ const RegisterPage = () => {
                 <TextFields label="Password" name="password" type="password" />
               </div>
               {isError && <CredentialsError variant="primary"><RiErrorWarningLine fontSize={25} style={{ marginRight: '0.2rem' }} />El usuario ya existe</CredentialsError>}
-              <Button type="submit" variant="primary">Registrarse</Button>
+              <ButtonPrimary type="submit">Registrarse</ButtonPrimary>
               <NextLink href={router.query.p ? `/auth/login?p=${router.query.p}` : '/auth/login'}>¿Ya tienes cuenta?</NextLink>
             </Form>
           }}
