@@ -5,7 +5,7 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import styled from "styled-components";
 import { AuthLayout } from "../../components/layouts";
-import { Button, ButtonPrimary } from "../../share/Button";
+import { ButtonPrimary } from "../../share/Button";
 import { TextFields } from '../../components/ui/TextFields';
 import { CredentialsError } from '../../share/CredentialsError';
 import { RiErrorWarningLine } from 'react-icons/ri';
